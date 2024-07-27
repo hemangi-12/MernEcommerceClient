@@ -16,7 +16,7 @@ const Buynow = () => {
 
 
   const getdatabuy = async () => {
-    const res = await fetch(`${url}/cartdetails`, {
+    const res = await fetch(`/cartdetails`, {
         method: "GET",
         headers: {
             Accept:"application/json",

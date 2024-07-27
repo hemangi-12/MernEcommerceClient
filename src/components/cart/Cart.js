@@ -45,7 +45,7 @@ const Cart = () => {
 
   //add cart fuction
   const addtocart = async (id) => {
-    const checkres = await fetch(`/addcart/${id}`, {
+    const checkres = await fetch(`${url}/addcart/${id}`, {
         method: "POST",
         headers: {
             Accept: "application/json",
