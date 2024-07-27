@@ -4,16 +4,19 @@ import Option from './Option';
 import Right from './Right';
 import Subtotal from './Subtotal';
 import { Divider } from '@mui/material';
+import { url } from '../../Render';
 
 const Buynow = () => {
 
   const [cartdata, setCartdata] = useState("");
   console.log(cartdata);
+
+  
    
 
 
   const getdatabuy = async () => {
-    const res = await fetch(`/cartdetails`, {
+    const res = await fetch(`${url}/cartdetails`, {
         method: "GET",
         headers: {
             Accept:"application/json",

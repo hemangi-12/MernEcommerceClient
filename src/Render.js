@@ -1,0 +1,1 @@
+export const url="https://amazonserverapi-3.onrender.com";

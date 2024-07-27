@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {LoginContext} from "../context/ContextProvider";
+import { url } from '../../Render';
 
 const Sign_in = () => {
 
@@ -33,7 +34,7 @@ const Sign_in = () => {
        
         const { email, password } = logdata;
         
-        const res = await fetch("/login", {
+        const res = await fetch(`${url}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

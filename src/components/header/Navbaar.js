@@ -20,6 +20,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {useSelector} from "react-redux";
 import { products } from './../home/productdata';
+import { url } from '../../Render';
 
 const Navbaar = () => {
 
@@ -50,7 +51,7 @@ const Navbaar = () => {
 
 
     const getdetailvaliduser =async()=>{
-        const res=await fetch("/validuser",{
+        const res=await fetch(`${url}/validuser`,{
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -79,7 +80,7 @@ const Navbaar = () => {
     }
 
     const logoutuser = async () => {
-        const res2 = await fetch("/logout", {
+        const res2 = await fetch(`${url}/logout`, {
             method: "GET",
             headers: {
                 Accept: "application/json",
